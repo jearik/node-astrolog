@@ -1,6 +1,7 @@
 {
   "name": "node-astrolog",
   "version": "1.0.0",
+  "license": "MIT",
   "main": "server/server.js",
   "scripts": {
     "start": "node .",
@@ -8,6 +9,7 @@
     "posttest": "nsp check"
   },
   "dependencies": {
+    "coffee-script": "^1.10.0",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "helmet": "^0.14.0",
@@ -15,6 +17,7 @@
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^2.1.0",
     "loopback-datasource-juggler": "^2.39.0",
+    "request": "^2.69.0",
     "serve-favicon": "^2.0.1"
   },
   "devDependencies": {

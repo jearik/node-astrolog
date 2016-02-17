@@ -1,2 +1,5 @@
 # node-astrolog
-NodeJS front-end to astrolog app
+
+NodeJS front-end to astrolog app found at astrolog.org.
+
+
