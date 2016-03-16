@@ -1,0 +1,30 @@
+{
+  "name": "subject",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "dateAndTime": {
+      "type": "date",
+      "required": true
+    },
+    "coordinates": {
+      "type": "string"
+    },
+    "tzOverride": {
+      "type": "string"
+    },
+    "dstOverride": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
