@@ -32,7 +32,7 @@
     "dataSource": "db",
     "public": false
   },
-  "subject": {
+  "Subject": {
     "dataSource": "db",
     "public": true
   }
