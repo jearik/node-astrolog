@@ -17,18 +17,29 @@ On Debian-based distributions:
     apt-get install build-essential libx11-dev unzip
 
 - Acquire
-  Go to http://www.astrolog.org/astrolog/astfile.htm and download the source
-  (ast60src.zip as of this writing) and the ephemeris files (astephem.zip) and
-  place them in the 'downloaded' directory.
+
+  For the sake of automated testing from a fresh clone, this repository
+  includes a copy of the following files obtained from 
+  http://www.astrolog.org/astrolog/astfile.htm:
+
+    ast61src.zip
+    astephem.zip
+
+  You should feel free to re-download them or download newer versions if such
+  are available.
+
+- Configure
+
+  Edit build/astrolog.h for an X11 configuration. (details to come later)
 
 - Build
   - From project root:
 
-    mkdir -p build/astrolog bin
-    cd build/astrolog
-    unzip ../../ast60src.zip
+    mkdir -p build bin
+    cd build
+    unzip ../download/ast61src.zip
     make
-    mv astrolog ../../bin
+    mv astrolog ../bin
 
 ## Rest of project
 
