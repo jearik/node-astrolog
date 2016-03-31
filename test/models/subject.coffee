@@ -1,13 +1,14 @@
 assert = require 'assert'
-testData = require '../test-data'
+testData = require '../../testData'
 
 app = require '../..'
 {Subject} = app.models
 
-describe 'Subject', ->
-  it 'should have a constructor', (done) ->
-    Subject.create testData.subject
-      .then (subject) ->
-        assert subject
-        done()
-      .catch done
+module.exports =
+  Subject:
+    "should have a constructor": (done) ->
+      Subject.create testData.subject
+        .then (subject) ->
+          assert subject
+          done()
+        .catch done
