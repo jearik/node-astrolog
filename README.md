@@ -22,8 +22,8 @@ On Debian-based distributions:
   includes a copy of the following files obtained from 
   http://www.astrolog.org/astrolog/astfile.htm:
 
-    ast61src.zip
-    astephem.zip
+      ast61src.zip
+      astephem.zip
 
   You should feel free to re-download them or download newer versions if such
   are available.

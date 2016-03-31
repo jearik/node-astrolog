@@ -4,10 +4,6 @@ moment = require 'moment'
 app = Subject = null
 
 module.exports =
-  'these tests':
-    'should not be broken': ->
-      assert true
-
   'this app':
     'should exist': ->
       app = require '..'

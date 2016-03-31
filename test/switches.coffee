@@ -27,3 +27,9 @@ module.exports =
             done()
           .catch done
 
+      'extracting interpretation strings': ->
+        switches = new Switches help: 'meanings'
+        str = switches.toString()
+        assert str.match /-I (\d+)/
+        assert str.match /-YQ 0/
+        assert str.match /-HI/

@@ -13,5 +13,15 @@ module.exports =
       assert 'function' is typeof runner.text
 
   'Astrolog.runner.text':
-    'should be able to run Astrolog 6.00': (done) ->
+    'should be able to run Astrolog 6.10 at all': (done) ->
       done()
+
+  'Astrolog.runner.info':
+    'should extract interpretation strings': (done) ->
+      runner.info()
+        .then (interp) ->
+          assert.equal typeof interp, 'object'
+          assert.equal typeof interp.sign, 'object'
+          assert interp.sign.Pisces
+          done()
+        .catch done

@@ -15,12 +15,6 @@
     },
     "coordinates": {
       "type": "string"
-    },
-    "tzOverride": {
-      "type": "string"
-    },
-    "dstOverride": {
-      "type": "string"
     }
   },
   "validations": [],
