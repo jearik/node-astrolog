@@ -20,6 +20,9 @@ stubTask = (name, desc, warning) ->
 stubTask 'fetch', 'Acquire Astrolog source',
   "WARNING: Currently cannot fetch Astrolog files. Their servers are weird."
 
+stubTask 'configure', 'Modify astrolog.h',
+  "WARNING: Configure not yet implemented."
+
 stubTask 'build', 'Build Astrolog',
   "WARNING: Build not yet implemented."
 

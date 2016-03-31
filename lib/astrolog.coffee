@@ -1,5 +1,5 @@
 moment = require 'moment'
-config = require 'config'
+config = require '../config'
 
 module.exports =
   Switches: class Switches
@@ -7,20 +7,11 @@ module.exports =
       {subject} = opts
       @all = "-qa 1974 03 16 02:50PM PST 123.45W 45N"
 
-  runner:
-    any: (args) ->
-      {spawn} = require 'chil_process'
-      new Promise (resolve, reject) ->
-        opts =
-          cwd: config.dir.ephemeris
-        spawn
-
-    text: (switches) ->
-    image: (switches) ->
+  runner: require './runner'
 
   warn: ->
 
-  expectedVersion: '6.00'
+  expectedVersion: '6.10'
 
   parseTitle: (line) ->
 

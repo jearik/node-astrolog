@@ -35,3 +35,11 @@ On Debian-based distributions:
     node .
 
 Now browse to http://127.0.0.1:3000 (or equivalent). Neat, huh?!
+
+# Dependency Licenses
+
+This tool builds on Astrolog which, according to the comment at the top of
+each source file, is distriuted under the GPLv2. See said files for specifics.
+
+The LICENSE file in this repo applies to everything except the content of the
+'download' directory, which were downloaded from astrolog.org.
