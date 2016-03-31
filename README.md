@@ -2,6 +2,10 @@
 
 NodeJS front-end to astrolog app found at astrolog.org.
 
+# Project Status
+
+## _PATHETIC_
+
 # Installation
 
 ## Astrolog
