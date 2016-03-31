@@ -1,10 +1,8 @@
 assert = require 'assert'
+testData = require '../test-data'
 
-app = Subject = null
-
-before ->
-  app = require '..'
-  {Subject} = app.models
+app = require '../..'
+{Subject} = app.models
 
 describe 'Subject', ->
   it 'should have a constructor', (done) ->
@@ -13,5 +11,3 @@ describe 'Subject', ->
         assert subject
         done()
       .catch done
-
-
