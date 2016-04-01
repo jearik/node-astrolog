@@ -19,16 +19,28 @@ Trying to fix my shit?
 
 ### Planned
 
+  - Chat with Ty Pethe
+  - Chat with Bruce Felt
+
+### Actual
+
+  - Chat with Ty Pethe
+
+# Todo
+
+# Done
+
+## Session 2016-03-31 14:00
+
+### Planned
+
   - Design
     - Describe the app more than just "wrap astrolog in StrongLoop"
 
 ### Actual
 
   - Lots of work on runner
-
-# Todo
-
-# Done
+  - Wrote some tests for the Switches class and then made them pass
 
 ## Session 2016-03-31 14:00
 
