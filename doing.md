@@ -15,7 +15,11 @@ Trying to fix my shit?
 
 # Now
 
-## Session 2016-03-31 14:00
+# Todo
+
+# Done
+
+## Session 2016-03-31 17:00
 
 ### Planned
 
@@ -25,10 +29,7 @@ Trying to fix my shit?
 ### Actual
 
   - Chat with Ty Pethe
-
-# Todo
-
-# Done
+  - Chat with Bruce Felt
 
 ## Session 2016-03-31 14:00
 
