@@ -33,6 +33,7 @@ module.exports =
     'should extract interpretation strings': (done) ->
       runner.info()
         .then (interp) ->
+          console.log 'interp:', interp
           assert.equal typeof interp, 'object'
           assert.equal typeof interp.sign, 'object'
           assert interp.sign.Pisces
