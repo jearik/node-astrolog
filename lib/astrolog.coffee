@@ -1,10 +1,12 @@
 moment = require 'moment'
-config = require '../config'
+Switches = require './switches'
+runnerFactory = require './runner'
 
-module.exports =
-  Switches: require './switches'
 
-  runner: require './runner'
+module.exports = Astrolog = (config) ->
+  Switches: Switches
+
+  runner: runnerFactory config: config
 
   warn: ->
 

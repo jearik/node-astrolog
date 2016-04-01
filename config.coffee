@@ -1,8 +1,11 @@
 path = require 'path'
+_ = require 'underscore'
 
-module.exports =
-  astrolog:
-    srcUrl: "http://www.astrolog.org/ftp/ast60src.zip"
-    ephemerisUrl: "http://www.astrolog.org/ftp/ephem/astephem.zip"
+module.exports = config =
+  basedir: root = path.dirname module.filename
+
+_.extend config,
+  bin:
+    astrolog: path.join root, 'bin', 'astrolog'
   dir:
-    ephemeris: path.resolve path.join path.dirname module.filename, '..', 'ephemeris'
+    ephemeris: path.resolve path.join root, 'data'

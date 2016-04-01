@@ -10,10 +10,12 @@ before ->
 
   {Subject} = app.models
 
+{listInList} = require '../lib/util'
+
 module.exports =
   'Switches':
     'should exist at all': ->
-      Astrolog = require '../lib/astrolog'
+      Astrolog = (require '../lib/astrolog')()
       {Switches} = Astrolog
       assert new Switches
 
@@ -22,14 +24,15 @@ module.exports =
         Subject.create testData.subject
           .then (subject) ->
             switches = new Switches subject: subject
-            assert.equal switches.all,
-              "-qa 1974 03 16 02:50PM PST 123.45W 45N"
+            args = switches.args
+            assert -1 < listInList args, "-qa 1974 03 16 02:50PM PST 123.45W 45N".split ' '
             done()
           .catch done
 
       'extracting interpretation strings': ->
         switches = new Switches help: 'meanings'
-        str = switches.toString()
-        assert str.match /-I (\d+)/
-        assert str.match /-YQ 0/
-        assert str.match /-HI/
+        args = switches.args
+        assert "-HI" in args
+
+        assert -1 < listInList args, ["-YQ", "0"]
+        assert -1 < listInList args, ["-I", "200"]

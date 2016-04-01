@@ -13,48 +13,72 @@ Trying to fix my shit?
     - transform data (map/reduce)
     - etc
 
-# Now
-
 # Todo
+
+# Doing Now
+
+## Session 2016-04-01 15:30
+
+  - Plan
+    - 'able to run' test passing
+  - Actual
+    - Success!
 
 # Done
 
+## Session 2016-04-01 14:40
+
+  - Plan
+    - runner tests passing
+  - Actual
+    - some progress I guess
+    - need to chunk my tasks smaller
+
+## Session 2016-04-01 13:30
+
+  - Plan
+    - switches tests passing
+  - Actual
+    - lot of work on lib/switches
+    - extending session
+    - And good thing too because the switches tests are passing now
+
+## Session 2016-04-01 12:10
+
+  - Plan
+    - text runner passing tests without cheating
+  - Actual
+    - util object and tests
+    - added tests for Switches
+    - ran well over time
+
 ## Session 2016-03-31 17:00
 
-### Planned
-
-  - Chat with Ty Pethe
-  - Chat with Bruce Felt
-
-### Actual
-
-  - Chat with Ty Pethe
-  - Chat with Bruce Felt
+  - Plan
+    - Chat with Ty Pethe
+    - Chat with Bruce Felt
+  - Actual
+    - Chat with Ty Pethe
+    - Chat with Bruce Felt
 
 ## Session 2016-03-31 14:00
 
-### Planned
-
-  - Design
-    - Describe the app more than just "wrap astrolog in StrongLoop"
-
-### Actual
-
-  - Lots of work on runner
-  - Wrote some tests for the Switches class and then made them pass
+  - Plan
+    - Design
+      - Describe the app more than just "wrap astrolog in StrongLoop"
+  - Actual
+    - Lots of work on runner
+    - Wrote some tests for the Switches class and then made them pass
 
 ## Session 2016-03-31 14:00
 
-### Planned
-
-  - Review existing tests
-  - Refactor tests per above
-
-### Actual
-
-  - Polished tests a little
-  - Moved test data to its own directory
-  - Unrelated stuff
+  - Plan
+    - Review existing tests
+    - Refactor tests per above
+  - Actual
+    - Polished tests a little
+    - Moved test data to its own directory
+    - Unrelated stuff
 
 # Design
 
