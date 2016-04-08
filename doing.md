@@ -78,6 +78,7 @@ Trying to fix my shit?
   - Actual
     - Lots of work on runner
     - Wrote some tests for the Switches class and then made them pass
+    - Fixed a sometimes-failing test (though don't know how)
 
 ## Session 2016-03-31 14:00
 

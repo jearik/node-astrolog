@@ -2,15 +2,10 @@ assert = require 'assert'
 moment = require 'moment'
 
 testData = require '../testData'
+{listInList} = require '../lib/util'
 
 Subject = Astrolog = Switches = null
-
-before ->
-  app = require '..'
-
-  {Subject} = app.models
-
-{listInList} = require '../lib/util'
+{Subject} = (app = require '..').models
 
 module.exports =
   'Switches':
@@ -21,6 +16,7 @@ module.exports =
 
     'should generate input switches for':
       'a Subject': (done) ->
+
         Subject.create testData.subject
           .then (subject) ->
             switches = new Switches subject: subject
