@@ -17,10 +17,13 @@ Trying to fix my shit?
 
 # Doing Now
 
-## Session 2016-04-08 17:30
+## Session 2016-04-08 18:00
 
   - Planned
     - Get currently extant tests passing or marked as known bugs
+  - Actual
+    - Time extension :P
+    - But then success!
 
 # Done
 

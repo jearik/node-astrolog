@@ -1,6 +1,6 @@
 learning = {}
 meaningFound = null
-currentTopic = null
+currentTopicName = null
 
 _ = require 'underscore'
 
@@ -13,12 +13,12 @@ module.exports = (runner) ->
       .on 'data', (line) -> addMeaning line.toString()
       .on 'end', ->
         for name, value of meaning
-          currentTopic[name] = value.learned
+          meaning[name] = learning[name]
 
         resolve meaning
       .on 'error', (args...) -> reject args...
   
-subject = class Subject
+class Subject
   constructor: (info) ->
     @learned = {}
     _.extend this, info
@@ -44,7 +44,7 @@ meaning =
   planet:
     new Subject
       header: /^Planets/
-      match: /^(.*) represents one's (.*).$/
+      match: /^(.*) represents? one's (.*).$/
       transform: ([all, name, meaning]) -> {name, meaning}
   aspect:
     new Subject
@@ -53,21 +53,24 @@ meaning =
       transform: ([all, name, meaning]) -> {name, meaning}
 
 addMeaning = (line) ->
-  # XXX: Bad code smell - too clever, too Perl-esq
-  [matchFound] =
-    (Object.keys meaning)
-      .map (name) -> [name, meaning[name].headingMatch line]
-      .filter ([name, headingMatch]) -> headingMatch
-      .map ([name, headingMatch]) -> name
+  if (not detectTopicChange line)
+    if not currentTopicName
+      console.log "no topic yet", line
+      return
 
-  if matchFound
-    return currentTopic = learning[matchFound] or= {name: matchFound}
+    topic = meaning[currentTopicName]
 
-  subject = meaning[currentTopic.name]
+    if matched = line.match topic.match
+      info = topic.transform matched
+      learning[currentTopicName][info.name] = info.meaning
+    else
+      throw new Error "No match for input: #{line}"
 
-  if matched = line.match subject.match
-    _.extend currentTopic, subject.transform matched
-  else
-    throw new Error "No match for input: #{line}"
+detectTopicChange = (line) ->
+  for topicName, topic of meaning
+    if matchResult = topic.headingMatch line
+      currentTopicName = topicName
+      return learning[topicName] or= {name: topicName}
 
+  return
 
