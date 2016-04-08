@@ -17,14 +17,19 @@ Trying to fix my shit?
 
 # Doing Now
 
+## Session 2016-04-08 17:30
+
+  - Planned
+    - Get currently extant tests passing or marked as known bugs
+
+# Done
+
 ## Session 2016-04-01 15:30
 
   - Plan
     - 'able to run' test passing
   - Actual
     - Success!
-
-# Done
 
 ## Session 2016-04-01 14:40
 
