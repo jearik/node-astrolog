@@ -24,6 +24,7 @@ Trying to fix my shit?
   - Actual
     - Time extension :P
     - But then success!
+    - Using spare time to plan next session
 
 # Done
 
