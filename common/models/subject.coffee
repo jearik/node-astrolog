@@ -1,3 +1,1 @@
-module.exports = function(Subject) {
-
-};
+module.exports = (Subject) ->
