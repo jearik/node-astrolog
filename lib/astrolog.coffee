@@ -1,14 +1,21 @@
 moment = require 'moment'
-Switches = require './switches'
-runnerFactory = require './runner'
 
 
 module.exports = Astrolog = (config) ->
-  Switches: Switches
+  Switches: Switches = require './switches'
 
-  runner: runnerFactory config: config
+  EventReport: EventReport = require './event-report'
+
+  RunnerFactory: RunnerFactory = require './runner'
+
+  AstroParse: AstroParse = require './astro-parse'
+
+  config: config
+
+  runner: RunnerFactory config: config
 
   warn: ->
+  error: (errMsg = 'generic error') -> throw new Error errMsg
 
   expectedVersion: '6.10'
 

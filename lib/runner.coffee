@@ -12,11 +12,11 @@ _ = require 'underscore'
 
 module.exports = runnerFactory = ({config}) ->
   Switches = require './switches'
+  EventReport = require './event-report'
   getInfo = require './text-info'
 
   return runner =
     text: (args...) ->
-      console.log "runner.text", args
       child = child_process.spawn config.bin.astrolog, args...
       child.on 'error', (args...) -> child.stdout.emit 'error', args...
       byline child.stdout

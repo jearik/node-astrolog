@@ -4,7 +4,7 @@ currentTopicName = null
 
 _ = require 'underscore'
 
-{Switches} = Astrolog = (require './astrolog')()
+{Switches, warn, error} = Astrolog = (require './astrolog')()
 
 module.exports = (runner) ->
   meaningFound or= new Promise (resolve, reject) ->
@@ -59,7 +59,7 @@ meaning =
 addMeaning = (line) ->
   if (not detectTopicChange line)
     if not currentTopicName
-      console.log "no topic yet", line
+      warn "no topic yet", line
       return
 
     topic = meaning[currentTopicName]

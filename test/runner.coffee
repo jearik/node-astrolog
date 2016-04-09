@@ -10,7 +10,7 @@ module.exports =
     '.runner':
       'should exist': ->
         Astrolog = (require '../lib/astrolog') config
-        {runner, EventReport} = Astrolog
+        {runner} = Astrolog
         assert runner
 
     '.text':
@@ -41,6 +41,10 @@ module.exports =
       'should convert event report output for now to object': (done) ->
         runner.now()
           .then (report) ->
+            {EventReport} = Astrolog = (require '../lib/astrolog') config
+            assert report
+            assert EventReport
+            console.log report
             assert report instanceof EventReport
             done()
           .catch done
