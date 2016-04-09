@@ -28,6 +28,8 @@ class Switch
   withOverrides: (overrides) ->
     new Switch @flag, @format, @params, _.extend {}, @defaults, overrides
 
+booleanSwitch = (flag) -> new Switch flag
+
 numericSwitch = (flag, name, defValue) ->
   defaults = {}
   defaults[name] = defValue
@@ -48,6 +50,8 @@ switches =
     planetDetails: 'HS'
     rays: 'H7'
     meanings: 'HI'
+
+  now: booleanSwitch 'n'
 
   screenWidth: numericSwitch "I", 'width', 200
 
@@ -90,17 +94,20 @@ for kind in Object.keys switches.help
   switches.help[kind] = new Switch switches.help[kind]
 
 
-module.exports =
+module.exports = Switches =
   class Switches
     constructor: (opts = {}) ->
-      {subject, help, @args = []} = opts
+      {subject, help, now, @args = []} = opts
       @needed = []
    
       if help
-        @need switches.help[help], @maxScreenWidth(), @noPageBreaks(),
+        @need switches.help[help], @maxScreenWidth(), @noPageBreaks()
 
       if subject
         @need @subject subject
+
+      if now
+        @need @now
 
     maxScreenWidth: -> switches.screenWidth
 
@@ -109,6 +116,8 @@ module.exports =
     subject: (subject) ->
       switches.subject.withOverrides subject
       
+    now: switches.now
+
     need: (picked...) ->
       @needed = @needed.concat picked
 
@@ -118,3 +127,4 @@ module.exports =
     toString: ->
       @args.join ' '
 
+Switches.now = -> new Switches now: true

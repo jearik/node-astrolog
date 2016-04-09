@@ -37,7 +37,6 @@ module.exports =
             done()
           .catch done
 
-    ###
     '.now':
       'should convert event report output for now to object': (done) ->
         runner.now()
@@ -45,4 +44,3 @@ module.exports =
             assert report instanceof EventReport
             done()
           .catch done
-    ###

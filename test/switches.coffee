@@ -32,3 +32,8 @@ module.exports =
 
         assert -1 < listInList args, ["-YQ", "0"]
         assert -1 < listInList args, ["-I", "200"]
+
+      'now': ->
+        switches = Switches.now()
+        args = switches.args
+        assert "-n" in args

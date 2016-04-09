@@ -9,13 +9,17 @@ _ = require 'underscore'
 module.exports = (runner) ->
   meaningFound or= new Promise (resolve, reject) ->
     switches = new Switches help: 'meanings'
+
     runner switches.args
-      .on 'data', (line) -> addMeaning line.toString()
+      .on 'data', (line) ->
+        addMeaning line.toString()
+
       .on 'end', ->
         for name, value of meaning
           meaning[name] = learning[name]
 
         resolve meaning
+
       .on 'error', (args...) -> reject args...
   
 class Subject
