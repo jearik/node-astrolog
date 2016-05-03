@@ -1,0 +1,11 @@
+Enter month for chart (e.g. '9' 'Sep') > May
+Enter day   for chart (e.g. '1' '31')  > 12
+Enter year  for chart (e.g. '2016')    > 1962
+Enter time  for chart (e.g. '18:30' '6:30pm')   > 00:18
+Enter if Daylight time in effect (e.g. 'y' '1') > y
+Enter time zone (e.g. '5' 'ET' for Eastern)     > 8
+Enter Longitude of place (e.g. '122W20') > 122W16
+Enter Latitude  of place (e.g. '47N36')  > 37N52
+Enter name or title for chart  > Martha
+Enter name of city or location > Berkeley
+
